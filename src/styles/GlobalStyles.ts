@@ -134,6 +134,30 @@ const GlobalStyle = styled.createGlobalStyle`
     border-collapse: collapse;
     border-spacing: 0;
   }
+
+  button {
+    cursor: pointer;
+    border: none;
+    background-color: unset;
+  }
+
+  html {
+    font-size: 62.5%;
+  }
+
+  :root {
+    --gray: #dcdde1;
+    --border-radius: 0.5rem;
+    --blue: #00a8ff;
+    --blue-hover: #0097e6;
+    --red: #e84118;
+    --red-hover: #c23616;
+  }
+
+  #root {
+    display: flex;
+    width: 100vw;
+  }
 `;
 
 export default GlobalStyle;
