@@ -1,30 +1,20 @@
-# React + TypeScript + Vite
+# Pre Onboarding TodoList
+## 원티드 프리온보딩 코스 사전 과제
+> Todo List 만들기
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+### 📝 요구사항
+- cra로 과제를 수행하기 위해서는 node.js와 npm이 설치 되어있어야 합니다.
+- 폴더 구조는 가능한 아래 양식을 맞춰주세요.
+- 스타일은 tailwind, styled-component, scss등 자유롭게 설정하시면 됩니다.
+- 아래 폴더와 파일은 필수 요소입니다. 나머지는 자유롭게 설정해주세요.
+```
+/src
+  /components
+    /List
+  /store
+  App.tsx
+  index.tsx
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### 📝 기능
+- todo 작성 및 삭제

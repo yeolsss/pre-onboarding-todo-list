@@ -37,6 +37,7 @@ const StTodoCard = styled.li`
   min-width: 24rem;
   border: 1px solid var(--gray);
   border-radius: var(--border-radius);
+  padding: 0.5rem;
   > p {
     flex: 1;
     padding: 0.5rem 1rem;
