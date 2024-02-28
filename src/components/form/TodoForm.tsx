@@ -1,40 +1,12 @@
-import useInput from "@/hooks/useInput.ts";
-import { useAppDispatch } from "@/store/store.ts";
 import Button from "@/components/button/Button.tsx";
 import TodoInput from "@/components/input/TodoInput.tsx";
-import {
-  BUTTON_COLOR,
-  BUTTON_TITLE,
-  BUTTON_TYPES,
-  Todo,
-} from "@/types/todoTypes.ts";
-import { addTodo } from "@/store/slice/todoSlice.ts";
+import { BUTTON_COLOR, BUTTON_TITLE, BUTTON_TYPES } from "@/types/todoTypes.ts";
 import styled from "styled-components";
+import useForm from "@/hooks/useForm.ts";
 
 export default function TodoForm() {
-  const [todoValue, setTodoValue, handleTodoOnChange, todoInputRef] =
-    useInput();
-
-  const dispatch = useAppDispatch();
-
-  const handleOnSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    if (todoValue.trim() === "") {
-      alert("할 일을 입력하세요.");
-      todoInputRef.current?.focus();
-      return;
-    }
-
-    const newTodo: Todo = {
-      id: Date.now(),
-      todo: todoValue,
-    };
-
-    dispatch(addTodo(newTodo));
-    setTodoValue("");
-  };
-
+  const { handleOnSubmit, todoValue, handleTodoOnChange, todoInputRef } =
+    useForm();
   return (
     <StForm onSubmit={handleOnSubmit}>
       <TodoInput
