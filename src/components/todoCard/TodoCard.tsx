@@ -5,19 +5,14 @@ import {
   Todo,
 } from "@/types/todoTypes.ts";
 import Button from "@/components/button/Button.tsx";
-import { useAppDispatch } from "@/store/store.ts";
-import { deleteTodo } from "@/store/slice/todoSlice.ts";
 import styled from "styled-components";
+import useDelete from "@/hooks/useDelete.ts";
 
 interface Props {
   todo: Todo;
 }
 export default function TodoCard({ todo }: Props) {
-  const dispatch = useAppDispatch();
-  const handleDelete = (id: number) => {
-    confirm("삭제하시겠습니까?") && dispatch(deleteTodo(id));
-  };
-
+  const handleDelete = useDelete();
   return (
     <StTodoCard key={todo.id}>
       <p>{todo.todo}</p>
